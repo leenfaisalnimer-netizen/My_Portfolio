@@ -104,7 +104,7 @@ For teams hiring in digital transformation and technology consulting, Leen Nimer
 ## 5. Higgsfield Seedance 2.0 — asset generation
 
 ### 5.1 Identity reference
-- **Source file:** `Media/[REFERENCE IMAGE FILENAME]` (Leen's own photo). The `Media/` folder is source material only; the site never loads it.
+- **Source file:** `Media/me.jpg` (Leen's own photo: cream hijab, ivory lace blouse with covered arms, small gold pendant, jasmine hedge). The `Media/` folder is source material only; the site never loads it.
 - The reference must be uploaded to Higgsfield (`media_upload` → PUT → `media_confirm`) and its `media_id` reused for **every** generation so the character stays consistent.
 - Hijab, colour, drape, neckline and covered arms must match the reference in every frame. Reject any take where styling drifts.
 
@@ -704,7 +704,7 @@ Hand-built inline SVG arrows and dots only, 1.5 px strokes, round caps. No icon 
 ├── BUILD-PLAN.md
 ├── .gitignore                 # raw/, .DS_Store
 ├── Media/                     # identity reference (source only, never loaded by the site)
-│   └── [REFERENCE IMAGE FILENAME]
+│   └── me.jpg
 ├── raw/                       # Higgsfield downloads (git-ignored)
 └── assets/
     ├── Leen-Nimer-CV.pdf      # supplied by Leen
@@ -817,7 +817,6 @@ init()
 | `[FIGMA VIEW LINK]` | Featured 04 (Karaz) |
 | `[CASE STUDY PDF]` | Featured 05 (Jawlatuna) |
 | `[NOTEBOOK LINK]` | Featured 06 (Emergency Response Analytics) |
-| `[REFERENCE IMAGE FILENAME]` | `Media/` — needed before video generation (not yet in the repository) |
 | `assets/Leen-Nimer-CV.pdf` | CV file — needed for the Download CV buttons (not yet in the repository) |
 
 **Resolved from your answers:** `[EMAIL]` → leen.faisal.nimer@gmail.com · `[LINKEDIN URL]` → https://www.linkedin.com/in/leen-nimer-259a24295 · `[GITHUB URL]` → https://github.com/leenfaisalnimer-netizen · `[ARABIC Naitive]` → Arabic (native) · `[ENGLISH B2 - C1]` → English (B2–C1).
