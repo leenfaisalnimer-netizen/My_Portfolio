@@ -790,12 +790,30 @@ html.lenis, html.lenis body { height: auto; }
 .role__org { color: var(--leaf); }
 .role__dates { color: var(--muted); font-size: .9375rem; font-variant-numeric: tabular-nums; text-align: right; }
 
-.skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.skills__key { margin: -4px 0 24px; font-size: .9375rem; color: var(--muted); }
+.skills__key span { color: var(--ink); font-weight: 500; }
+.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
 .skill { padding: 28px; border-radius: var(--r-card); background: var(--jasmine); box-shadow: var(--shadow-card); }
-.skill:nth-child(6) { grid-column: span 2; }
+.skill:nth-child(7) { grid-column: 1 / -1; }
+.skill:nth-child(7) .meters { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px var(--gap); }
+.meters { display: grid; gap: 14px; }
+.meter { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 6px 12px; }
+.meter__name { font-size: .9375rem; font-weight: 500; color: var(--ink); line-height: 1.3; }
+.meter__level { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; }
+.meter__bar { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.meter__bar i { display: block; height: 4px; border-radius: 2px; background: rgba(35, 72, 58, .1); position: relative; overflow: hidden; }
+.meter__bar i::after { content: ""; position: absolute; inset: 0; background: var(--leaf); transform: scaleX(0); transform-origin: left; }
+.meter[data-level="1"] .meter__bar i:nth-child(-n+1)::after,
+.meter[data-level="2"] .meter__bar i:nth-child(-n+2)::after,
+.meter[data-level="3"] .meter__bar i:nth-child(-n+3)::after,
+.meter[data-level="4"] .meter__bar i:nth-child(-n+4)::after { transform: scaleX(1); }
+.meter[data-level="4"] .meter__bar i::after { background: var(--gold); }
+.motion .meters:not(.is-filled) .meter__bar i::after { transform: scaleX(0); }
+.meters.is-filled .meter__bar i::after { transition: transform .7s var(--ease-out); }
+.meters.is-filled .meter__bar i:nth-child(2)::after { transition-delay: .08s; }
+.meters.is-filled .meter__bar i:nth-child(3)::after { transition-delay: .16s; }
+.meters.is-filled .meter__bar i:nth-child(4)::after { transition-delay: .24s; }
 .skill__area { font-family: var(--font-display); font-variation-settings: "opsz" 48; font-size: 1.5rem; letter-spacing: -0.02em; color: var(--leaf); margin-bottom: 16px; line-height: 1.15; }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tags li { padding: 6px 12px; border: 1px solid var(--hairline); border-radius: var(--r-pill); font-size: .875rem; line-height: 1.3; color: var(--ink); }
 
 /* --------------------------------------------------------------------------
    17. Marquee
@@ -885,8 +903,6 @@ html.lenis, html.lenis body { height: auto; }
   .stat:nth-child(4) { border-left: 0; padding-left: 0; }
   .stat:nth-child(n+4) { border-top: 1px solid var(--hairline); }
   .skills { grid-template-columns: repeat(2, 1fr); }
-  .skill:nth-child(6) { grid-column: auto; }
-  .skill:nth-child(7) { grid-column: span 2; }
   .case__inner { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .footer__note { grid-column: span 2; }
@@ -937,7 +953,7 @@ html.lenis, html.lenis body { height: auto; }
   .case__inner { padding: 24px 20px; }
   .timeline__item { grid-template-columns: 1fr; gap: 2px; }
   .skills { grid-template-columns: 1fr; }
-  .skill:nth-child(7) { grid-column: auto; }
+  .skill:nth-child(7) .meters { grid-template-columns: 1fr; }
   .award { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
   .award__issuer { grid-column: auto; }
   .finale__frame { aspect-ratio: 4 / 5; }

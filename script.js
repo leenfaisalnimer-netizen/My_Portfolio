@@ -611,11 +611,17 @@
       });
     });
 
-    /* Skill tags stagger inside each tile */
-    $$('.skill').forEach(function (s) {
-      var tags = $$('.tags li', s);
-      gsap.set(tags, { opacity: 0, y: 8 });
-      ScrollTrigger.create({ trigger: s, start: 'top 88%', once: true, onEnter: function () { gsap.to(tags, { opacity: 1, y: 0, duration: 0.6, stagger: 0.025, delay: 0.15 }); } });
+    /* Skill meters fill when each tile scrolls into view */
+    $$('.skill .meters').forEach(function (m, i) {
+      var rows = $$('.meter', m);
+      gsap.set(rows, { opacity: 0, y: 8 });
+      ScrollTrigger.create({
+        trigger: m, start: 'top 88%', once: true,
+        onEnter: function () {
+          gsap.to(rows, { opacity: 1, y: 0, duration: 0.6, stagger: 0.04, delay: 0.1 });
+          setTimeout(function () { m.classList.add('is-filled'); }, 250);
+        }
+      });
     });
   }
 
