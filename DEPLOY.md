@@ -44,3 +44,18 @@ If the domain is later hosted on Hostinger instead, upload the same four items
 Put the encoded clips and posters in `assets/video/` (names and ffmpeg steps in
 `BUILD-PLAN.md` §5.5), then set `data-ready="true"` on the three `data-scene`
 blocks in `index.html`. Until then the designed placeholders stay in place.
+
+## Project pages and media
+
+Each project has its own page in `work/<project>.html` and a media folder in
+`assets/work/<project>/`.
+
+- **Card preview and page cover:** replace `assets/work/<project>/cover.jpg`
+  (1600 × 1000) with your own image. Keep the file name and nothing else changes.
+- **Videos and pictures:** put the files in the same folder, then open the
+  project page and replace a dashed placeholder in the Gallery section. Ready-to-copy
+  snippets for a video and an image are in a comment just above the gallery.
+  Images open full screen when clicked.
+- **Details for the smaller projects:** replace the `[PROJECT DETAILS: …]`
+  placeholder with The need / What I did / Result / Limit rows, copying the
+  layout used on the six featured project pages.

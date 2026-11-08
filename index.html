@@ -69,6 +69,7 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
+  <div class="curtain" aria-hidden="true"><span class="curtain__mark">LN<i></i></span></div>
   <div class="preloader" aria-hidden="true">
     <div class="preloader__inner">
       <p class="preloader__name"><span>Leen</span> <span>Nimer</span></p>
@@ -308,9 +309,9 @@
                 <p class="pillar__body">Business analysis, requirements, process thinking and user research.</p>
                 <p class="pillar__proof-label">Proof</p>
                 <ul class="chips">
-                  <li><a class="chip" href="#work-blood-hub" data-jump>Blood Hub</a></li>
-                  <li><a class="chip" href="#work-karaz" data-jump>Karaz</a></li>
-                  <li><a class="chip" href="#awards" data-jump>1st place, Sketch Storm</a></li>
+                  <li><a class="chip" href="work/blood-hub.html">Blood Hub</a></li>
+                  <li><a class="chip" href="work/karaz.html">Karaz</a></li>
+                  <li><a class="chip" href="#awards">1st place, Sketch Storm</a></li>
                 </ul>
               </article>
               <article class="pillar" data-pillar>
@@ -319,9 +320,9 @@
                 <p class="pillar__body">Software, cloud and data engineering, with testing built in.</p>
                 <p class="pillar__proof-label">Proof</p>
                 <ul class="chips">
-                  <li><a class="chip" href="#work-aws" data-jump>HTUNews on AWS</a></li>
-                  <li><a class="chip" href="#work-aws" data-jump>HealthBooking</a></li>
-                  <li><a class="chip" href="#work-blood-bank" data-jump>Multi-Model Blood Bank</a></li>
+                  <li><a class="chip" href="work/htunews-healthbooking-aws.html">HTUNews on AWS</a></li>
+                  <li><a class="chip" href="work/htunews-healthbooking-aws.html">HealthBooking</a></li>
+                  <li><a class="chip" href="work/multi-model-blood-bank.html">Multi-Model Blood Bank</a></li>
                 </ul>
               </article>
               <article class="pillar" data-pillar>
@@ -330,9 +331,9 @@
                 <p class="pillar__body">Data-driven recommendations, leadership and community.</p>
                 <p class="pillar__proof-label">Proof</p>
                 <ul class="chips">
-                  <li><a class="chip" href="#work-emergency" data-jump>Emergency Response Analytics</a></li>
-                  <li><a class="chip" href="#leadership" data-jump>IEEE HTU Vice Chair (formerly Treasurer)</a></li>
-                  <li><a class="chip" href="#leadership" data-jump>BIG by Orange incubation</a></li>
+                  <li><a class="chip" href="work/emergency-response-analytics.html">Emergency Response Analytics</a></li>
+                  <li><a class="chip" href="#leadership">IEEE HTU Vice Chair (formerly Treasurer)</a></li>
+                  <li><a class="chip" href="#leadership">BIG by Orange incubation</a></li>
                 </ul>
               </article>
             </div>
@@ -438,184 +439,293 @@
       </div>
     </section>
 
-    <!-- 08 · FEATURED WORK ------------------------------------------------->
+    <!-- 08 · WORK ---------------------------------------------------------->
+    <!-- Card previews: replace assets/work/<project>/cover.jpg (1600×1000) with your own image. -->
     <section class="work" id="work" aria-labelledby="work-title">
       <div class="container">
         <header class="work__head">
-          <p class="eyebrow" data-reveal>Featured work</p>
-          <h2 class="h2" id="work-title" data-split>Work that shows its <em>evidence.</em></h2>
-          <p class="work__intro body-l" data-reveal>Six university projects. Each one shows its status, what I did, what happened and where its limits are.</p>
-          <ul class="legend" aria-label="Status labels" data-reveal>
-            <li><span class="status" data-status="deployed"><i></i>Deployed</span></li>
-            <li><span class="status" data-status="built"><i></i>Built</span></li>
-            <li><span class="status" data-status="prototype"><i></i>Prototype</span></li>
-            <li><span class="status" data-status="design"><i></i>Design only</span></li>
-            <li><span class="status" data-status="research"><i></i>Research plan</span></li>
-          </ul>
-        </header>
-
-        <div class="cases" data-cases>
-
-          <article class="case" id="work-blood-bank" aria-labelledby="case-1-title" data-case>
-            <div class="case__inner" data-tilt>
-              <header class="case__head">
-                <div class="case__top">
-                  <span class="case__num">01</span>
-                  <span class="status" data-status="built"><i></i>Built</span>
-                </div>
-                <p class="case__type">University project</p>
-                <h3 class="case__title" id="case-1-title">Multi-Model Blood Bank</h3>
-                <p class="case__tools">Oracle PL/SQL · MongoDB · Neo4j · Python · pytest</p>
-                <p class="case__links"><span class="placeholder" title="Placeholder, to be replaced">[REPO LINK]</span></p>
-              </header>
-              <dl class="case__rows">
-                <div class="case__row"><dt>The need</dt><dd>A regional blood bank brief covers three kinds of data: structured stock, irregular cold-chain readings, and road routes between centres and hospitals.</dd></div>
-                <div class="case__row"><dt>What I did</dt><dd>I gave each kind of data the database that suits it: 8 Oracle tables with views, triggers and a package; 50 MongoDB documents; and a Neo4j graph with 7 Cypher queries. One Python desktop app connects all three, covered by 3 pytest integration tests.</dd></div>
-                <div class="case__row case__row--result"><dt>Result</dt><dd>Neo4j answered the connected-data query in <strong>22 ms</strong> against Oracle's 132 ms. MongoDB ran the aggregation in <strong>17 ms</strong> against Oracle's 101 ms.</dd></div>
-                <div class="case__row case__row--limit"><dt>Limit</dt><dd>These timings come from a small dataset and a few runs, and each engine ran a comparable workload rather than an identical query. Concurrency is untested. Shortest path counts hops, not kilometres.</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="case" id="work-aws" aria-labelledby="case-2-title" data-case>
-            <div class="case__inner" data-tilt>
-              <header class="case__head">
-                <div class="case__top">
-                  <span class="case__num">02</span>
-                  <span class="status" data-status="deployed"><i></i>Deployed</span>
-                </div>
-                <p class="case__type">University project · Deployed to a live AWS account for coursework</p>
-                <h3 class="case__title" id="case-2-title">HTUNews on AWS and HealthBooking Serverless</h3>
-                <p class="case__tools">EC2 · ALB · Auto Scaling · S3 · IAM · Route 53 · ACM · Lambda · API Gateway · DynamoDB · Amplify · CloudWatch</p>
-                <p class="case__links"><span class="placeholder" title="Placeholder, to be replaced">[REPO LINK]</span> <span class="placeholder" title="Placeholder, to be replaced">[LIVE DEMO LINK IF RUNNING]</span></p>
-              </header>
-              <dl class="case__rows">
-                <div class="case__row"><dt>The need</dt><dd>Two scenarios: move a news site to secure, scalable cloud infrastructure, and launch a serverless medical appointment system.</dd></div>
-                <div class="case__row"><dt>What I did</dt><dd>For HTUNews I built a load-balanced Auto Scaling group across 3 Availability Zones, with IAM groups, MFA, chained security groups and HTTPS. For HealthBooking I connected a Vue front end to five Python Lambdas and two DynamoDB tables, with a least-privilege IAM role.</dd></div>
-                <div class="case__row case__row--result"><dt>Result</dt><dd>HTUNews scales from <strong>2 to 10 instances</strong> at a 60% CPU target, with weighted routing to move traffic in four steps. HealthBooking resets slots and appointments at midnight Amman time through EventBridge, sends notifications through SNS and reports through a CloudWatch dashboard.</dd></div>
-                <div class="case__row case__row--limit"><dt>Limit</dt><dd>HTUNews is an assignment scenario, not a client. I declared AI-assistant support in my report, deployed the services myself and can explain each decision.</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="case" id="work-blood-hub" aria-labelledby="case-3-title" data-case>
-            <div class="case__inner" data-tilt>
-              <header class="case__head">
-                <div class="case__top">
-                  <span class="case__num">03</span>
-                  <span class="status" data-status="design"><i></i>Design only</span>
-                </div>
-                <p class="case__type">University project</p>
-                <h3 class="case__title" id="case-3-title">Blood Hub Donation System</h3>
-                <p class="case__tools">Feasibility analysis · Use cases · DFDs · ERD · UML · Wireframes · Traceability</p>
-                <p class="case__links"><span class="placeholder" title="Placeholder, to be replaced">[CASE STUDY PDF]</span></p>
-              </header>
-              <dl class="case__rows">
-                <div class="case__row"><dt>The need</dt><dd>Blood donation coordination in Jordan leans on manual processes and social media appeals, with no central view of available donors.</dd></div>
-                <div class="case__row"><dt>What I did</dt><dd>I ran a feasibility study and risk assessment, then wrote 10 functional and 7 non-functional requirements. I added 6 user stories with Given-When-Then criteria, full analysis models and wireframes, and considered Jordan's data protection law (PDPL 24/2023) and SANAD integration.</dd></div>
-                <div class="case__row case__row--result"><dt>Result</dt><dd>A <strong>&ldquo;conditionally feasible&rdquo;</strong> verdict and a traceable design pack, with a hybrid Waterfall and Scrum delivery approach.</dd></div>
-                <div class="case__row case__row--limit"><dt>Limit</dt><dd>This is a proposed design based on desk research. It has not been built or tested with donors or hospitals.</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="case" id="work-karaz" aria-labelledby="case-4-title" data-case>
-            <div class="case__inner" data-tilt>
-              <header class="case__head">
-                <div class="case__top">
-                  <span class="case__num">04</span>
-                  <span class="status" data-status="prototype"><i></i>Prototype</span>
-                </div>
-                <p class="case__type">University project</p>
-                <h3 class="case__title" id="case-4-title">Karaz</h3>
-                <p class="case__tools">Figma · Personas · Segmentation · Value Proposition Canvas</p>
-                <p class="case__links"><span class="placeholder" title="Placeholder, to be replaced">[FIGMA VIEW LINK]</span></p>
-              </header>
-              <dl class="case__rows">
-                <div class="case__row"><dt>The need</dt><dd>People with allergies, intolerances or insulin resistance need a quick way to check whether a food suits them.</dd></div>
-                <div class="case__row"><dt>What I did</dt><dd>I defined the audience with a persona and a Value Proposition Canvas, then evolved the app from low-fidelity sketches to a high-fidelity Figma prototype.</dd></div>
-                <div class="case__row case__row--result"><dt>Result</dt><dd><strong>Feedback changed the product.</strong> A doctor's input removed AI medicine analysis, and friends and family replaced meal-by-meal logging with one daily log.</dd></div>
-                <div class="case__row case__row--limit"><dt>Limit</dt><dd>Karaz is a prototype, not a released app, and the feedback came from a small group.</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="case" id="work-jawlatuna" aria-labelledby="case-5-title" data-case>
-            <div class="case__inner" data-tilt>
-              <header class="case__head">
-                <div class="case__top">
-                  <span class="case__num">05</span>
-                  <span class="status" data-status="built"><i></i>Built (no-code)</span>
-                </div>
-                <p class="case__type">University project</p>
-                <h3 class="case__title" id="case-5-title">Jawlatuna</h3>
-                <p class="case__tools">Adalo · SRS · SDS · Functional specification · Traceability matrix</p>
-                <p class="case__links"><span class="placeholder" title="Placeholder, to be replaced">[CASE STUDY PDF]</span></p>
-              </header>
-              <dl class="case__rows">
-                <div class="case__row"><dt>The need</dt><dd>A tourism booking idea needed proof of demand and a disciplined route from requirements to testing.</dd></div>
-                <div class="case__row"><dt>What I did</dt><dd>I surveyed potential users, assessed feasibility including legal issues, and followed an incremental model. I built the app in Adalo and traced 7 functional requirements through a matrix to 10 test cases.</dd></div>
-                <div class="case__row case__row--result"><dt>Result</dt><dd>Testing logged <strong>2 defects</strong>, and both were resolved.</dd></div>
-                <div class="case__row case__row--limit"><dt>Limit</dt><dd>The survey sample was small, and the no-code build is a working proof of concept rather than a production system.</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="case case--signature" id="work-emergency" aria-labelledby="case-6-title" data-case>
-            <div class="case__inner" data-tilt>
-              <header class="case__head">
-                <div class="case__top">
-                  <span class="case__num">06</span>
-                  <span class="status" data-status="built"><i></i>Built</span>
-                </div>
-                <p class="case__type">University project</p>
-                <p class="case__echo">&ldquo;I report what the evidence shows.&rdquo;</p>
-                <h3 class="case__title" id="case-6-title">Emergency Response Analytics</h3>
-                <p class="case__tools">Python · scikit-learn · PyGAD · SciPy · Jupyter</p>
-                <p class="case__links"><span class="placeholder" title="Placeholder, to be replaced">[NOTEBOOK LINK]</span></p>
-              </header>
-              <dl class="case__rows">
-                <div class="case__row"><dt>The need</dt><dd>An emergency-centre scenario asked whether response time could be predicted from operational data.</dd></div>
-                <div class="case__row"><dt>What I did</dt><dd>I sampled 5,000 incidents from 368,000 rows, then compared two feature selection methods and three regression models. I also built a constrained genetic algorithm that produces a readable weighted formula, and checked it with SciPy.</dd></div>
-                <div class="case__row case__row--result"><dt>Result</dt><dd>All three models scored <strong>R² near zero</strong>, with an average error of about 4 minutes. I reported that the fields held no usable signal, and recommended planning around the stable 15-minute average while collecting richer data.</dd></div>
-                <div class="case__row case__row--limit"><dt>Limit</dt><dd>The genetic algorithm's target was built from its four input fields. It shows constrained optimisation working, not forecast accuracy on real response times.</dd></div>
-              </dl>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 09 · MORE WORK ----------------------------------------------------->
-    <section class="index" id="more" aria-labelledby="more-title">
-      <div class="container">
-        <header class="index__head">
-          <div>
-            <p class="eyebrow" data-reveal>More work</p>
-            <h2 class="h2" id="more-title" data-split>Eleven more, <em>labelled honestly.</em></h2>
+          <div class="work__intro-col">
+            <p class="eyebrow" data-reveal>Work</p>
+            <h2 class="h2" id="work-title" data-split>Work that shows its <em>evidence.</em></h2>
+            <p class="work__intro body-l" data-reveal>17 projects, each labelled with its status. Open any project for the full story: what I did, what happened and where its limits are.</p>
           </div>
           <div class="filters" role="group" aria-label="Filter projects by status" data-filters data-reveal>
-            <button type="button" class="filter" aria-pressed="true" data-filter="all">All <span>11</span></button>
-            <button type="button" class="filter" aria-pressed="false" data-filter="built">Built <span>8</span></button>
-            <button type="button" class="filter" aria-pressed="false" data-filter="design">Design only <span>2</span></button>
+            <button type="button" class="filter" aria-pressed="true" data-filter="all">All <span>17</span></button>
+            <button type="button" class="filter" aria-pressed="false" data-filter="deployed">Deployed <span>1</span></button>
+            <button type="button" class="filter" aria-pressed="false" data-filter="built">Built <span>11</span></button>
+            <button type="button" class="filter" aria-pressed="false" data-filter="prototype">Prototype <span>1</span></button>
+            <button type="button" class="filter" aria-pressed="false" data-filter="design">Design only <span>3</span></button>
             <button type="button" class="filter" aria-pressed="false" data-filter="research">Research plan <span>1</span></button>
           </div>
         </header>
 
-        <ul class="index__list" data-index>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">TrainWise</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">ASP.NET Core MVC training platform with EF Core, SQL Server, Identity, three signed-in roles, a Web API and Swagger</p></li>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">Matrix Manipulation System</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">Nine C programs using processes, threads, pipes, FIFOs and sockets, tested with 10 concurrent clients. 3.77× speed-up on 4 threads on 700×700 matrices</p></li>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">Task Management Website</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">MERN app with JWT and bcrypt, run as solo Scrum. Peer review removed open signup and added employee task suggestions</p></li>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">Nutricost MCT Decision Dashboard</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">Power BI model with DAX and forecasting on public Amazon product data. Case study only, not commissioned by Nutricost</p></li>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">Karen in the Kitchen</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">Unity educational game teaching CPU scheduling, built with tutorial guidance and tested with 3 groups</p></li>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">Milkcake Bakery Website</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">PHP and MySQL site with Bootstrap, planned in Figma and Canva, with a written test plan</p></li>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">Competition Voting System</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">SQL Server database normalised to 3NF, with role-based permissions and stored procedures</p></li>
-          <li class="index__row" data-status-row="built"><h3 class="index__name">Maze Solving Robot</h3><span class="status" data-status="built"><i></i>Built</span><p class="index__what">Arduino, 3D printing and Fusion 360</p></li>
-          <li class="index__row" data-status-row="design"><h3 class="index__name">Regional Office Network</h3><span class="status" data-status="design"><i></i>Design only</span><p class="index__what">OSPF ring network linking an Amman head office, six regional branches and a data centre, modelled for an assignment scenario</p></li>
-          <li class="index__row" data-status-row="design"><h3 class="index__name">NovaSecure Security Plan</h3><span class="status" data-status="design"><i></i>Design only</span><p class="index__what">Risk and security planning with NIST RMF and ISO 31000, for an assignment scenario</p></li>
-          <li class="index__row" data-status-row="research"><h3 class="index__name">3D-Print Defect Detection</h3><span class="status" data-status="research"><i></i>Research plan</span><p class="index__what">Survey-based research and a YOLOv8 plan. Nothing built yet</p></li>
-        </ul>
+        <div class="work__group" data-group>
+          <h3 class="work__group-title"><span>Featured</span> <span class="work__group-count" data-group-count>6</span></h3>
+          <ul class="pgrid pgrid--featured">
+            <li class="pcard-wrap pcard-wrap--featured" data-status-row="built">
+              <a class="pcard" href="work/multi-model-blood-bank.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/multi-model-blood-bank/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">01</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Multi-Model Blood Bank</h4>
+                  <p class="pcard__summary">Stock, cold-chain readings and road routes, each kept in the database that suits it, joined by one Python desktop app.</p>
+                  <p class="pcard__tools">Oracle PL/SQL · MongoDB · Neo4j · Python · +1</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap pcard-wrap--featured" data-status-row="deployed">
+              <a class="pcard" href="work/htunews-healthbooking-aws.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/htunews-healthbooking-aws/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">02</span><span class="status" data-status="deployed"><i></i>Deployed</span></div>
+                  <h4 class="pcard__title">HTUNews on AWS and HealthBooking Serverless</h4>
+                  <p class="pcard__summary">A load-balanced news site across 3 Availability Zones, and a serverless medical appointment system.</p>
+                  <p class="pcard__tools">EC2 · ALB · Auto Scaling · S3 · +8</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap pcard-wrap--featured" data-status-row="design">
+              <a class="pcard" href="work/blood-hub.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/blood-hub/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">03</span><span class="status" data-status="design"><i></i>Design only</span></div>
+                  <h4 class="pcard__title">Blood Hub Donation System</h4>
+                  <p class="pcard__summary">A traceable design pack for coordinating blood donation in Jordan: 10 functional and 7 non-functional requirements.</p>
+                  <p class="pcard__tools">Feasibility analysis · Use cases · DFDs · ERD · +3</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap pcard-wrap--featured" data-status-row="prototype">
+              <a class="pcard" href="work/karaz.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/karaz/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">04</span><span class="status" data-status="prototype"><i></i>Prototype</span></div>
+                  <h4 class="pcard__title">Karaz</h4>
+                  <p class="pcard__summary">A quick way for people with allergies, intolerances or insulin resistance to check whether a food suits them, reshaped by feedback.</p>
+                  <p class="pcard__tools">Figma · Personas · Segmentation · Value Proposition Canvas</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap pcard-wrap--featured" data-status-row="built">
+              <a class="pcard" href="work/jawlatuna.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/jawlatuna/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">05</span><span class="status" data-status="built"><i></i>Built (no-code)</span></div>
+                  <h4 class="pcard__title">Jawlatuna</h4>
+                  <p class="pcard__summary">A tourism booking app built in Adalo, with 7 functional requirements traced to 10 test cases.</p>
+                  <p class="pcard__tools">Adalo · SRS · SDS · Functional specification · +1</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap pcard-wrap--featured" data-status-row="built">
+              <a class="pcard pcard--signature" href="work/emergency-response-analytics.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/emergency-response-analytics/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">06</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <p class="pcard__echo">&ldquo;I report what the evidence shows.&rdquo;</p>
+                  <h4 class="pcard__title">Emergency Response Analytics</h4>
+                  <p class="pcard__summary">Three models found no usable signal in 5,000 incidents. I reported that, and built my recommendation around it.</p>
+                  <p class="pcard__tools">Python · scikit-learn · PyGAD · SciPy · +1</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="work__group" data-group>
+          <h3 class="work__group-title"><span>More projects</span> <span class="work__group-count" data-group-count>11</span></h3>
+          <ul class="pgrid pgrid--more">
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/trainwise.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/trainwise/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">07</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">TrainWise</h4>
+                  <p class="pcard__summary">ASP.NET Core MVC training platform with EF Core, SQL Server, Identity, three signed-in roles, a Web API and Swagger.</p>
+                  <p class="pcard__tools">ASP.NET Core MVC · EF Core · SQL Server · Identity · +2</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/matrix-manipulation-system.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/matrix-manipulation-system/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">08</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Matrix Manipulation System</h4>
+                  <p class="pcard__summary">Nine C programs using processes, threads, pipes, FIFOs and sockets, tested with 10 concurrent clients. 3.77× speed-up on 4 threads on 700×700 matrices.</p>
+                  <p class="pcard__tools">C · Processes · Threads · Pipes · +2</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/task-management-website.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/task-management-website/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">09</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Task Management Website</h4>
+                  <p class="pcard__summary">MERN app with JWT and bcrypt, run as solo Scrum. Peer review removed open signup and added employee task suggestions.</p>
+                  <p class="pcard__tools">MongoDB · Express · React · Node.js · +3</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/nutricost-mct-dashboard.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/nutricost-mct-dashboard/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">10</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Nutricost MCT Decision Dashboard</h4>
+                  <p class="pcard__summary">Power BI model with DAX and forecasting on public Amazon product data. Case study only, not commissioned by Nutricost.</p>
+                  <p class="pcard__tools">Power BI · DAX · Forecasting</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/karen-in-the-kitchen.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/karen-in-the-kitchen/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">11</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Karen in the Kitchen</h4>
+                  <p class="pcard__summary">Unity educational game teaching CPU scheduling, built with tutorial guidance and tested with 3 groups.</p>
+                  <p class="pcard__tools">Unity</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/milkcake-bakery-website.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/milkcake-bakery-website/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">12</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Milkcake Bakery Website</h4>
+                  <p class="pcard__summary">PHP and MySQL site with Bootstrap, planned in Figma and Canva, with a written test plan.</p>
+                  <p class="pcard__tools">PHP · MySQL · Bootstrap · Figma · +1</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/competition-voting-system.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/competition-voting-system/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">13</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Competition Voting System</h4>
+                  <p class="pcard__summary">SQL Server database normalised to 3NF, with role-based permissions and stored procedures.</p>
+                  <p class="pcard__tools">SQL Server · 3NF · Stored procedures</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="built">
+              <a class="pcard" href="work/maze-solving-robot.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/maze-solving-robot/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">14</span><span class="status" data-status="built"><i></i>Built</span></div>
+                  <h4 class="pcard__title">Maze Solving Robot</h4>
+                  <p class="pcard__summary">Arduino, 3D printing and Fusion 360.</p>
+                  <p class="pcard__tools">Arduino · 3D printing · Fusion 360</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="design">
+              <a class="pcard" href="work/regional-office-network.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/regional-office-network/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">15</span><span class="status" data-status="design"><i></i>Design only</span></div>
+                  <h4 class="pcard__title">Regional Office Network</h4>
+                  <p class="pcard__summary">OSPF ring network linking an Amman head office, six regional branches and a data centre, modelled for an assignment scenario.</p>
+                  <p class="pcard__tools">OSPF · Network design</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="design">
+              <a class="pcard" href="work/novasecure-security-plan.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/novasecure-security-plan/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">16</span><span class="status" data-status="design"><i></i>Design only</span></div>
+                  <h4 class="pcard__title">NovaSecure Security Plan</h4>
+                  <p class="pcard__summary">Risk and security planning with NIST RMF and ISO 31000, for an assignment scenario.</p>
+                  <p class="pcard__tools">NIST RMF · ISO 31000 · Risk planning</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="pcard-wrap" data-status-row="research">
+              <a class="pcard" href="work/3d-print-defect-detection.html" data-cursor="View">
+                <div class="pcard__media">
+                  <img src="assets/work/3d-print-defect-detection/cover.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                  <span class="pcard__view" aria-hidden="true">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+                <div class="pcard__body">
+                  <div class="pcard__top"><span class="pcard__num">17</span><span class="status" data-status="research"><i></i>Research plan</span></div>
+                  <h4 class="pcard__title">3D-Print Defect Detection</h4>
+                  <p class="pcard__summary">Survey-based research and a YOLOv8 plan. Nothing built yet.</p>
+                  <p class="pcard__tools">Survey research · YOLOv8</p>
+                  <span class="pcard__cta">View project <svg class="icon" aria-hidden="true"><use href="#arrow" /></svg></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 

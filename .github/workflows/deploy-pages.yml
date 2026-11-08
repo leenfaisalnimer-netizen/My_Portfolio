@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir _site
           cp index.html style.css script.js _site/
-          cp -R assets _site/
+          cp -R assets work _site/
           if [ -f CNAME ]; then cp CNAME _site/; fi
           touch _site/.nojekyll
 
