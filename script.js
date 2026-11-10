@@ -393,10 +393,11 @@
     var lastFocus = null;
     var close = function () { box.hidden = true; img.removeAttribute('src'); if (lenis) lenis.start(); if (lastFocus) lastFocus.focus(); };
     document.addEventListener('click', function (e) {
-      var t = e.target.closest && e.target.closest('.pgallery .media img');
+      var t = e.target.closest && e.target.closest('.pgallery .media img, [data-full]');
       if (!t) return;
       lastFocus = t;
-      img.src = t.currentSrc || t.src; img.alt = t.alt || '';
+      var thumb = t.tagName === 'IMG' ? t : t.querySelector('img');
+      img.src = t.getAttribute('data-full') || t.currentSrc || t.src; img.alt = thumb ? thumb.alt : '';
       box.hidden = false;
       if (lenis) lenis.stop();
       $('[data-lightbox-close]', box).focus();
@@ -1001,6 +1002,8 @@
       var track = $('[data-process-track]');
       var progress = $('[data-process-progress]');
       var stages = $$('.stage', track);
+      /* cards slide in sideways, so load all their images once the section is near */
+      ScrollTrigger.create({ trigger: proc, start: 'top bottom+=100%', once: true, onEnter: function () { $$('img[loading="lazy"]', track).forEach(function (i) { i.loading = 'eager'; }); } });
       if (desktop) {
         proc.classList.add('is-horizontal');
         cleanups.push(function () { proc.classList.remove('is-horizontal'); });
@@ -1013,18 +1016,20 @@
             onUpdate: function (s) { if (progress) progress.style.transform = 'scaleX(' + s.progress.toFixed(4) + ')'; }
           }
         });
-        stages.forEach(function (st) {
-          gsap.from($('.stage__num', st), {
-            xPercent: 40, ease: 'none',
-            scrollTrigger: { trigger: st, containerAnimation: hTween, start: 'left right', end: 'center center', scrub: true }
-          });
-        });
       } else {
         gsap.set(stages, { autoAlpha: 0, y: 28 });
         ScrollTrigger.batch(stages, {
           start: 'top 88%', once: true,
-          onEnter: function (els) { gsap.to(els, { autoAlpha: 1, y: 0, duration: 1, stagger: 0.1 }); }
+          onEnter: function (els) { gsap.to(els, { autoAlpha: 1, y: 0, duration: 1, stagger: 0.06 }); }
         });
+        /* swipe row: progress line follows the horizontal scroll */
+        var onSwipe = function () {
+          var max = track.scrollWidth - track.clientWidth;
+          if (progress) progress.style.transform = 'scaleX(' + (max > 0 ? track.scrollLeft / max : 0).toFixed(4) + ')';
+        };
+        track.addEventListener('scroll', onSwipe, { passive: true });
+        onSwipe();
+        cleanups.push(function () { track.removeEventListener('scroll', onSwipe); });
       }
 
       /* ---------- FINALE ---------- */

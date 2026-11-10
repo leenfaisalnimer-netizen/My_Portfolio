@@ -130,7 +130,7 @@
       <a class="nav__logo" href="#top" aria-label="Leen Nimer, back to top">LN<span class="nav__dot" aria-hidden="true"></span></a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#work" data-nav-link>Work</a>
-        <a href="#how" data-nav-link>How I work</a>
+        <a href="#certificates" data-nav-link>Certificates</a>
         <a href="#story" data-nav-link>Story</a>
         <a href="#recognition" data-nav-link>Recognition</a>
       </nav>
@@ -147,7 +147,7 @@
   <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden data-menu>
     <nav class="menu__inner container" aria-label="Mobile">
       <a href="#work" class="menu__link"><span>Work</span></a>
-      <a href="#how" class="menu__link"><span>How I work</span></a>
+      <a href="#certificates" class="menu__link"><span>Certificates</span></a>
       <a href="#story" class="menu__link"><span>Story</span></a>
       <a href="#recognition" class="menu__link"><span>Recognition</span></a>
       <a href="#contact" class="menu__link"><span>Contact</span></a>
@@ -437,44 +437,128 @@
       </div>
     </section>
 
-    <!-- 07 · HOW I WORK ---------------------------------------------------->
-    <section class="process" id="how" aria-labelledby="how-title">
+    <!-- 07 · CERTIFICATES & CREDENTIALS --------------------------------------->
+    <!-- Mapping: card data-cert="C1"…"C16" = Media/C1…C16 (C15 = the CamScanner file).
+         Web copies live in assets/certs/ (c1-900.jpg on the card, c1-2000.jpg in the full view). -->
+    <section class="process certs" id="certificates" aria-labelledby="certs-title">
       <div class="process__pin">
         <div class="container process__head">
-          <p class="eyebrow" data-reveal>How I work</p>
-          <h2 class="h2" id="how-title" data-split>From the first question to the <em>tested result.</em></h2>
+          <p class="eyebrow" data-reveal>Certificates &amp; credentials</p>
+          <h2 class="h2" id="certs-title" data-split>Recognition, on the <em>record.</em></h2>
         </div>
         <div class="process__viewport">
           <ol class="process__track" data-process-track>
-            <li class="stage">
-              <span class="stage__num">01</span>
-              <h3 class="stage__name">Understand</h3>
-              <p class="stage__what">Requirements, feasibility, risk, user research</p>
-              <p class="stage__where"><span>Where to see it</span>Blood Hub: 10 functional and 7 non-functional requirements</p>
+            <li class="stage cert" data-cert="C1">
+              <button class="cert__open" type="button" data-full="assets/certs/c1-2000.jpg" data-cursor="View" aria-label="View full certificate: Sketch Storm">
+                <span class="cert__frame"><img src="assets/certs/c1-900.jpg" alt="Sketch Storm certificate, Al Hussein Technical University" width="900" height="592" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">Sketch Storm</h3>
+              <p class="cert__meta">Al Hussein Technical University <span aria-hidden="true">·</span> 2025</p>
             </li>
-            <li class="stage">
-              <span class="stage__num">02</span>
-              <h3 class="stage__name">Design</h3>
-              <p class="stage__what">Personas, flows, data models, prototypes</p>
-              <p class="stage__where"><span>Where to see it</span>Karaz: from low-fidelity sketches to a high-fidelity Figma prototype</p>
+            <li class="stage cert" data-cert="C2">
+              <button class="cert__open" type="button" data-full="assets/certs/c2-2000.jpg" data-cursor="View" aria-label="View full certificate: IEEE 2026 Jordan Section Outstanding Student Branch (Medium) Award">
+                <span class="cert__frame"><img src="assets/certs/c2-900.jpg" alt="IEEE 2026 Jordan Section Outstanding Student Branch (Medium) Award certificate, Al Hussein Technical University" width="900" height="643" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">IEEE 2026 Jordan Section Outstanding Student Branch (Medium) Award</h3>
+              <p class="cert__meta">Al Hussein Technical University <span aria-hidden="true">·</span> 2026</p>
             </li>
-            <li class="stage">
-              <span class="stage__num">03</span>
-              <h3 class="stage__name">Build</h3>
-              <p class="stage__what">Web apps, databases, cloud infrastructure</p>
-              <p class="stage__where"><span>Where to see it</span>HTUNews and HealthBooking on AWS, TrainWise in ASP.NET Core</p>
+            <li class="stage cert" data-cert="C3">
+              <button class="cert__open" type="button" data-full="assets/certs/c3-2000.jpg" data-cursor="View" aria-label="View full certificate: Business Incubation, Entrepreneurship Hackathon 2024">
+                <span class="cert__frame"><img src="assets/certs/c3-900.jpg" alt="Business Incubation, Entrepreneurship Hackathon 2024 certificate, Al Hussein Technical University" width="900" height="644" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">Business Incubation, Entrepreneurship Hackathon 2024</h3>
+              <p class="cert__meta">Al Hussein Technical University <span aria-hidden="true">·</span> 2024</p>
             </li>
-            <li class="stage">
-              <span class="stage__num">04</span>
-              <h3 class="stage__name">Test</h3>
-              <p class="stage__what">Test cases, traceability, integration tests</p>
-              <p class="stage__where"><span>Where to see it</span>Jawlatuna: 10 test cases, 2 defects logged and resolved</p>
+            <li class="stage cert" data-cert="C4">
+              <button class="cert__open" type="button" data-full="assets/certs/c4-2000.jpg" data-cursor="View" aria-label="View full certificate: Incubation to Reach MVP: Certificate of Completion">
+                <span class="cert__frame"><img src="assets/certs/c4-900.jpg" alt="Incubation to Reach MVP: Certificate of Completion certificate, Orange Foundation" width="900" height="627" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">Incubation to Reach MVP: Certificate of Completion</h3>
+              <p class="cert__meta">Orange Foundation <span aria-hidden="true">·</span> 2025</p>
             </li>
-            <li class="stage">
-              <span class="stage__num">05</span>
-              <h3 class="stage__name">Improve</h3>
-              <p class="stage__what">Feedback, measurement, honest review</p>
-              <p class="stage__where"><span>Where to see it</span>Task Management: peer review removed open signup</p>
+            <li class="stage cert" data-cert="C5">
+              <button class="cert__open" type="button" data-full="assets/certs/c5-2000.jpg" data-cursor="View" aria-label="View full certificate: Jordan Young Scientist Exhibition 2025">
+                <span class="cert__frame"><img src="assets/certs/c5-900.jpg" alt="Jordan Young Scientist Exhibition 2025 certificate, Embassy of Ireland &amp; Jordan Young Scientist Initiative" width="900" height="638" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">Jordan Young Scientist Exhibition 2025</h3>
+              <p class="cert__meta">Embassy of Ireland &amp; Jordan Young Scientist Initiative <span aria-hidden="true">·</span> 2025</p>
+            </li>
+            <li class="stage cert" data-cert="C6">
+              <button class="cert__open" type="button" data-full="assets/certs/c6-2000.jpg" data-cursor="View" aria-label="View full certificate: Judge, JoHackathon: Jordan National Programming Competition">
+                <span class="cert__frame"><img src="assets/certs/c6-900.jpg" alt="Judge, JoHackathon: Jordan National Programming Competition certificate, JoHackathon" width="626" height="900" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">Judge, JoHackathon: Jordan National Programming Competition</h3>
+              <p class="cert__meta">JoHackathon <span aria-hidden="true">·</span> 2025</p>
+            </li>
+            <li class="stage cert" data-cert="C7">
+              <button class="cert__open" type="button" data-full="assets/certs/c7-2000.jpg" data-cursor="View" aria-label="View full certificate: MicroMouse 2026 Robot National Contest">
+                <span class="cert__frame"><img src="assets/certs/c7-900.jpg" alt="MicroMouse 2026 Robot National Contest certificate, IEEE RAS Student Chapter, Al Hussein Technical University" width="900" height="657" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">MicroMouse 2026 Robot National Contest</h3>
+              <p class="cert__meta">IEEE RAS Student Chapter, Al Hussein Technical University <span aria-hidden="true">·</span> 2026</p>
+            </li>
+            <li class="stage cert" data-cert="C8">
+              <button class="cert__open" type="button" data-full="assets/certs/c8-2000.jpg" data-cursor="View" aria-label="View full certificate: SpringFest, Technical Team">
+                <span class="cert__frame"><img src="assets/certs/c8-900.jpg" alt="SpringFest, Technical Team certificate, GDG on Campus HTU" width="900" height="603" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">SpringFest, Technical Team</h3>
+              <p class="cert__meta">GDG on Campus HTU</p>
+            </li>
+            <li class="stage cert" data-cert="C9">
+              <button class="cert__open" type="button" data-full="assets/certs/c9-2000.jpg" data-cursor="View" aria-label="View full certificate: 3rd Place, Orange ICT Girls Hackathon">
+                <span class="cert__frame"><img src="assets/certs/c9-900.jpg" alt="3rd Place, Orange ICT Girls Hackathon certificate, Al Hussein Technical University" width="900" height="643" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">3rd Place, Orange ICT Girls Hackathon</h3>
+              <p class="cert__meta">Al Hussein Technical University</p>
+            </li>
+            <li class="stage cert" data-cert="C10">
+              <button class="cert__open" type="button" data-full="assets/certs/c10-2000.jpg" data-cursor="View" aria-label="View full certificate: Super Girls in ICT Hackathon">
+                <span class="cert__frame"><img src="assets/certs/c10-900.jpg" alt="Super Girls in ICT Hackathon certificate, Orange Digital Center / Coding School" width="900" height="648" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">Super Girls in ICT Hackathon</h3>
+              <p class="cert__meta">Orange Digital Center / Coding School <span aria-hidden="true">·</span> 2024</p>
+            </li>
+            <li class="stage cert" data-cert="C11">
+              <button class="cert__open" type="button" data-full="assets/certs/c11-2000.jpg" data-cursor="View" aria-label="View full certificate: HTU Language Day">
+                <span class="cert__frame"><img src="assets/certs/c11-900.jpg" alt="HTU Language Day certificate, Al Hussein Technical University" width="900" height="674" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">HTU Language Day</h3>
+              <p class="cert__meta">Al Hussein Technical University <span aria-hidden="true">·</span> 2025</p>
+            </li>
+            <li class="stage cert" data-cert="C12">
+              <button class="cert__open" type="button" data-full="assets/certs/c12-2000.jpg" data-cursor="View" aria-label="View full certificate: SUMO Robot Contest 2025">
+                <span class="cert__frame"><img src="assets/certs/c12-900.jpg" alt="SUMO Robot Contest 2025 certificate, Al Hussein Technical University" width="900" height="571" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">SUMO Robot Contest 2025</h3>
+              <p class="cert__meta">Al Hussein Technical University <span aria-hidden="true">·</span> 2025</p>
+            </li>
+            <li class="stage cert" data-cert="C13">
+              <button class="cert__open" type="button" data-full="assets/certs/c13-2000.jpg" data-cursor="View" aria-label="View full certificate: SUMO Robot Contest 2024">
+                <span class="cert__frame"><img src="assets/certs/c13-900.jpg" alt="SUMO Robot Contest 2024 certificate, Al Hussein Technical University" width="900" height="653" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">SUMO Robot Contest 2024</h3>
+              <p class="cert__meta">Al Hussein Technical University <span aria-hidden="true">·</span> 2024</p>
+            </li>
+            <li class="stage cert" data-cert="C14">
+              <button class="cert__open" type="button" data-full="assets/certs/c14-2000.jpg" data-cursor="View" aria-label="View full certificate: StarT International Award 2022: Jordan Top Three">
+                <span class="cert__frame"><img src="assets/certs/c14-900.jpg" alt="StarT International Award 2022: Jordan Top Three certificate, LUMA Centre Finland" width="630" height="900" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">StarT International Award 2022: Jordan Top Three</h3>
+              <p class="cert__meta">LUMA Centre Finland <span aria-hidden="true">·</span> 2022</p>
+            </li>
+            <li class="stage cert" data-cert="C15">
+              <button class="cert__open" type="button" data-full="assets/certs/c15-2000.jpg" data-cursor="View" aria-label="View full certificate: 73 Hours of Community Volunteering">
+                <span class="cert__frame"><img src="assets/certs/c15-900.jpg" alt="73 Hours of Community Volunteering certificate, Al Hussein Technical University" width="900" height="638" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">73 Hours of Community Volunteering</h3>
+              <p class="cert__meta">Al Hussein Technical University <span aria-hidden="true">·</span> 2024/2025</p>
+            </li>
+            <li class="stage cert" data-cert="C16">
+              <button class="cert__open" type="button" data-full="assets/certs/c16-2000.jpg" data-cursor="View" aria-label="View full certificate: Jordan Young Scientist Exhibition 2024">
+                <span class="cert__frame"><img src="assets/certs/c16-900.jpg" alt="Jordan Young Scientist Exhibition 2024 certificate, Embassy of Ireland &amp; Jordan Young Scientist Initiative" width="900" height="638" loading="lazy" decoding="async"></span>
+              </button>
+              <h3 class="cert__name">Jordan Young Scientist Exhibition 2024</h3>
+              <p class="cert__meta">Embassy of Ireland &amp; Jordan Young Scientist Initiative <span aria-hidden="true">·</span> 2024</p>
             </li>
           </ol>
         </div>
@@ -899,6 +983,10 @@
     </div>
   </footer>
 
+  <div class="lightbox" hidden data-lightbox role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <button class="lightbox__close" type="button" data-lightbox-close>Close</button>
+    <img class="lightbox__img" alt="">
+  </div>
   <div class="toast" role="status" aria-live="polite" data-toast></div>
 
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

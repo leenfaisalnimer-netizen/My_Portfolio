@@ -59,3 +59,14 @@ Each project has its own page in `work/<project>.html` and a media folder in
 - **Details for the smaller projects:** replace the `[PROJECT DETAILS: …]`
   placeholder with The need / What I did / Result / Limit rows, copying the
   layout used on the six featured project pages.
+
+## Certificates & credentials
+
+The section reuses the old "How I work" scroll mechanics (pinned, horizontal on
+desktop; a swipe row on tablet and mobile). Each card in `index.html` carries
+`data-cert="C1"` … `data-cert="C16"`, matching the originals in `Media/`
+(C15 is the file named `CamScanner 09-11-2026 11.45_4.jpg.jpeg`).
+
+Web copies live in `assets/certs/`: `c<N>-900.jpg` for the card and
+`c<N>-2000.jpg` for the full-screen view. To add a certificate, copy one `<li class="stage cert">`
+block, point it at the new images and update its name; the scroll distance adapts automatically.
