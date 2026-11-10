@@ -522,10 +522,25 @@ html.lenis, html.lenis body { height: auto; }
   --k: 1;                       /* global size multiplier (smaller on mobile) */
   --logo-gap: 64px;             /* visible space between logo artwork */
   --logo-row: 72px;             /* row height; taller boxes overflow into the band padding */
+  /* Pure white zone centred on the logo row. It must cover the tallest
+     white-backed image boxes (GDG, BIG by Orange: ~74px above and below centre). */
+  --plateau: 92px;
+  /* Distance over which ivory eases into white, top and bottom. */
+  --fade: calc(50% - var(--plateau));
   position: relative;
-  background: var(--jasmine);
-  border-block: 1px solid var(--hairline-soft);
-  padding: clamp(40px, 5vw, 64px) 0;
+  /* Ivory -> white -> ivory with eased stops, so there is no visible edge. */
+  background: linear-gradient(to bottom,
+    var(--ivory) 0,
+    rgb(252 248 241) calc(var(--fade) * .25),
+    rgb(253 251 247) calc(var(--fade) * .5),
+    rgb(254 254 253) calc(var(--fade) * .75),
+    #fff var(--fade),
+    #fff calc(100% - var(--fade)),
+    rgb(254 254 253) calc(100% - var(--fade) * .75),
+    rgb(253 251 247) calc(100% - var(--fade) * .5),
+    rgb(252 248 241) calc(100% - var(--fade) * .25),
+    var(--ivory) 100%);
+  padding: clamp(120px, 12vw, 176px) 0;
   overflow: clip;
 }
 .logos__track { display: flex; width: max-content; animation: logos-scroll 70s linear infinite; }
@@ -567,9 +582,10 @@ html.lenis, html.lenis body { height: auto; }
 .logos [data-logo="tawasol-2025"] { --h: 93; --trim: 12; }
 
 @media (max-width: 767px) {
-  .logos { --k: .68; --logo-gap: 56px; padding: 28px 0; }
+  .logos { --k: .68; --logo-gap: 56px; --plateau: 64px; padding: 104px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .logos { --plateau: calc(50% - 104px); }
   .logos__track { animation: none !important; width: 100%; }
   .logos__set { flex: 1 1 auto; flex-wrap: wrap; justify-content: center; row-gap: 40px; padding-inline: var(--gutter); }
   .logos__set[aria-hidden="true"] { display: none; }
