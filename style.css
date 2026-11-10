@@ -514,6 +514,68 @@ html.lenis, html.lenis body { height: auto; }
 @keyframes cue { 0% { transform: translateY(-100%); } 55% { transform: translateY(0); } 100% { transform: translateY(100%); } }
 
 /* --------------------------------------------------------------------------
+   8b. Logo marquee
+   Logos are shown exactly as supplied: no filters, blend modes or recolouring.
+   The band is white so logos that ship with a white background sit flush.
+   -------------------------------------------------------------------------- */
+.logos {
+  --k: 1;                       /* global size multiplier (smaller on mobile) */
+  --logo-gap: 64px;             /* visible space between logo artwork */
+  --logo-row: 72px;             /* row height; taller boxes overflow into the band padding */
+  position: relative;
+  background: var(--jasmine);
+  border-block: 1px solid var(--hairline-soft);
+  padding: clamp(40px, 5vw, 64px) 0;
+  overflow: clip;
+}
+.logos__track { display: flex; width: max-content; animation: logos-scroll 70s linear infinite; }
+.logos:hover .logos__track { animation-play-state: paused; }
+.logos__set { display: flex; align-items: center; flex: none; }
+.logos__item {
+  flex: none; height: calc(var(--logo-row) * var(--k));
+  display: flex; align-items: center; justify-content: center;
+  padding-inline: calc(var(--logo-gap) * var(--k) / 2);
+  /* absorb whitespace built into the image so the visible gaps stay even */
+  margin-inline: calc(var(--trim, 0) * -1px * var(--k));
+}
+.logos__item img {
+  height: calc(var(--h, 64) * 1px * var(--k));
+  width: auto; max-width: none; object-fit: contain;
+  user-select: none; -webkit-user-drag: none;
+}
+@keyframes logos-scroll { to { transform: translateX(-50%); } }
+
+/* Logo marquee config: --h = displayed image height (px, desktop),
+   --trim = built-in side whitespace absorbed per side (px). Values were measured
+   from each file's visible artwork; dense solid marks are set a little smaller. */
+.logos [data-logo="orange"] { --h: 51; --trim: 0; }
+.logos [data-logo="big-by-orange"] { --h: 137; --trim: 0; }
+.logos [data-logo="intel-isef"] { --h: 61; --trim: 0; }
+.logos [data-logo="luma"] { --h: 85; --trim: 11; }
+.logos [data-logo="pgc-jordan-2026"] { --h: 59; --trim: 4; }
+.logos [data-logo="pgc-jordan-2024"] { --h: 65; --trim: 3; }
+.logos [data-logo="joys"] { --h: 54; --trim: 0; }
+.logos [data-logo="embassy-of-ireland"] { --h: 128; --trim: 42; }
+.logos [data-logo="rcoy-mena"] { --h: 116; --trim: 25; }
+.logos [data-logo="shoman-foundation"] { --h: 98; --trim: 42; }
+.logos [data-logo="gdg"] { --h: 148; --trim: 22; }
+.logos [data-logo="guinness"] { --h: 59; --trim: 0; }
+.logos [data-logo="hamdi-mango"] { --h: 118; --trim: 4; }
+.logos [data-logo="ieee"] { --h: 47; --trim: 5; }
+.logos [data-logo="jsyp-2024"] { --h: 134; --trim: 29; }
+.logos [data-logo="esports-future-summit"] { --h: 56; --trim: 0; }
+.logos [data-logo="tawasol-2025"] { --h: 93; --trim: 12; }
+
+@media (max-width: 767px) {
+  .logos { --k: .68; --logo-gap: 56px; padding: 28px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logos__track { animation: none !important; width: 100%; }
+  .logos__set { flex: 1 1 auto; flex-wrap: wrap; justify-content: center; row-gap: 40px; padding-inline: var(--gutter); }
+  .logos__set[aria-hidden="true"] { display: none; }
+}
+
+/* --------------------------------------------------------------------------
    9. Stats
    -------------------------------------------------------------------------- */
 .stats { padding: clamp(56px, 7vw, 112px) 0; }
